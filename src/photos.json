@@ -1,1 +1,15 @@
+// photos.json
+
+[
+  {
+    "url": "public/fonts/photo1.jpg",
+    "title": "Photo 1"
+  },
+  {
+    "url": "public/fonts/photo2.jpg",
+    "title": "Photo 2"
+  },
+  ...
+]
+```
 
