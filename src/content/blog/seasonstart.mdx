@@ -1,0 +1,25 @@
+title: "Season Start"
+description: "Lorem ipsum dolor sit amet"
+pubDate: "2026"
+heroImage: "/blog-placeholder-5.jpg"
+
+
+import React from 'react';
+import PhotoGallery from './PhotoGallery';
+
+const IndividualPage = () => {
+  const photos = [
+    { id: 1, url: 'photo1.jpg', title: 'Photo 1' },
+    { id: 2, url: 'photo2.jpg', title: 'Photo 2' },
+    { id: 3, url: 'photo3.jpg', title: 'Photo 3' }
+  ];
+
+  return (
+    <div>
+      <h1>Photo Gallery</h1>
+      <PhotoGallery photos={photos} />
+    </div>
+  );
+}
+
+export default IndividualPage;
