@@ -1,4 +1,4 @@
-```jsx
+
 // PhotoGallery.js
 
 import React, { useState, useEffect } from 'react';
@@ -25,42 +25,3 @@ const PhotoGallery = () => {
 };
 
 export default PhotoGallery;
-```
-
-```json
-// photos.json
-
-[
-  {
-    "url": "path/to/photo1.jpg",
-    "title": "Photo 1"
-  },
-  {
-    "url": "path/to/photo2.jpg",
-    "title": "Photo 2"
-  },
-  ...
-]
-```
-
-```css
-/* PhotoGallery.css */
-
-.photo-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
-}
-
-.photo-item {
-  img {
-    max-width: 100%;
-    border-radius: 8px;
-  }
-  
-  p {
-    margin-top: 0.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-  }
-}
