@@ -1,0 +1,58 @@
+// src/components/LiteYouTubeEmbed.astro
+import 'lite-youtube-embed'; // Import the web component
+
+interface Props {
+  videoId: string;
+  title?: string;
+  // You can pass other lite-youtube-embed attributes here
+  // e.g., poster?: string; (for custom poster image)
+  // playlabel?: string; (for custom play button label)
+}
+
+const { videoId, title = "YouTube video player", ...attrs } = Astro.props;
+---
+<div class="lite-youtube-container">
+  <lite-youtube videoid={videoId} playlabel={title} {...attrs}>
+  </lite-youtube>
+</div>
+
+<style is:global>
+  /* Optional: Override default styles or add responsive container */
+  .lite-youtube-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 800px; /* Optional: limit max width */
+    margin: 0 auto;
+  }
+
+  .lite-youtube-container lite-youtube {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Default lite-youtube-embed styles are usually sufficient,
+     but you can customize them here if needed.
+     Example:
+  lite-youtube {
+    background-color: #000;
+  }
+  lite-youtube::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    background-image: url(https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+  */
+</style>
